@@ -5,7 +5,12 @@ const certRoute = require("./routes/certificate");
 
 const app = express();
 
-app.use(cors());
+// Allow requests only from your frontend URL
+app.use(cors({
+  origin: "https://certificate-generation-and-email-de.vercel.app",
+  methods: ["GET", "POST"],
+  credentials: true,
+}));
 
 app.use(express.json());
 app.use("/api/certificate", certRoute);
