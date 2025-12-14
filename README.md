@@ -70,3 +70,29 @@ cd frontend
 npm install
 npm run dev
 ```
+## 📧 Email Setup & Environment Variables
+
+Create a `.env` file in the `backend` folder to store your email credentials and backend port:
+
+```env
+# Your Gmail address
+EMAIL=your_email@gmail.com
+
+# Your Gmail App Password
+EMAIL_PASS=your_gmail_app_password
+
+# Backend server port
+PORT=9000
+
+### 🔑 How to Generate a Gmail App Password
+
+Follow these steps to create an App Password for your Gmail account:
+
+1. Go to your Google Account: [https://myaccount.google.com/](https://myaccount.google.com/)
+2. Navigate to **Security → App passwords**.
+3. Select **Mail** as the app and **Other (Custom name)** as the device.
+4. Click **Generate**.
+5. Copy the generated password and use it as `EMAIL_PASS` in your `.env` file:
+
+```env
+EMAIL_PASS=your_generated_app_password
