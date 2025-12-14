@@ -12,7 +12,7 @@ export default function App() {
 
   try {
     await axios.post(
-      "https://certificate-generation-and-email.onrender.com/api/certificate/generate", // <- Use Render link here
+      "https://certificate-generation-and-email.onrender.com/api/certificate/generate", 
       form
     );
     alert("✅ Certificate sent to email");
